@@ -1,0 +1,19 @@
+$primary-color:#27E1C1;
+$secondary-color:#efeecf;
+$accent-color:#0a746a;
+$text-color:#32135e;
+$ternary-color:#686754;
+
+
+@mixin transition-ease{
+    transition: all 0.5s ease-in-out;
+}
+
+@function set-text-color($color){
+    @if(lightness($color)>40%){
+        @return #000;
+
+    }@else{
+        @return #fff;
+    }
+}
